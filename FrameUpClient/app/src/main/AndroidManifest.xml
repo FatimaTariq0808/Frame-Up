@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.frameupclient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FrameUpClient"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+
+        <activity
+            android:name=".Activities.ChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".Activities.SignInActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity
+            android:name=".Activities.SignUpActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activities.StartActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activities.UsersActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".fireBase.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activities.ViewReport"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".Activities.CreateRequest"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.RemoveMember"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.CreateNotice"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.CreateReport"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.RequestList"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Notification"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.UserList"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.OperativeSociety"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.RateSociety"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.CreateSocietyNewsfeed"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AdminHome"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SocietyPage"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ViewSociety"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.CreateSociety"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.CreateEvent"
+            android:exported="true" >
+
+        </activity>
+
+        <activity
+            android:name=".Activities.ViewPoll"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.PollStructure"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.CreatePoll"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.UserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Newsfeed"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.VisitorHome"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.ViewPost"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.CreatePost"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.OTP_verification"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.VisitorList"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Registeration"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.Main"
+            android:exported="true" />
+    </application>
+
+</manifest>
